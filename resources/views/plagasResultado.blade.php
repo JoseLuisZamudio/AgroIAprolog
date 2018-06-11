@@ -43,7 +43,52 @@
 
 					if(arana_roja === -1){
 						if(larvas === -1){
+							if(caracol === -1){
+								if(babosa === -1){
+									if(hormigas === -1){
+										if(cochinillas === -1){
+											if(picudo_rojo === -1){
+												if(avispa_serradora === -1){
+													if(trips === -1){
+														if(mosca_blanca === -1){
+															if(pulgones === -1){
 
+															}
+															else {
+																alert('pulgones')
+															}
+														}
+														else {
+															alert('mosca_blanca')
+														}
+													}
+													else {
+														alert('trips')
+													}
+												}
+												else {
+													alert('avispa_serradora')
+												}
+											}
+											else {
+												alert('picudo_rojo')
+											}
+										}
+										else {
+											alert('cochinillas')
+										}
+									}
+									else {
+										alert('hormigas')
+									}
+								}
+								else {
+									alert('babosa')
+								}
+							}
+							else {
+								alert('caracol')
+							}
 						}
 						else {
 							alert('larvas')
