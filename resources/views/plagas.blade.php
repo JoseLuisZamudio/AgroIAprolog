@@ -48,8 +48,8 @@
 						<div class="form-group">
 							<label for="caparazon">¿Tiene Caparazon?</label>
 						 	<select class="form-control" name="caparazon">
-						 		<option value="caparazon_si">Si</option>
 						 		<option value="caparazon_no">No</option>
+								<option value="caparazon_si">Si</option>
 						 	</select>
 						</div>
 
@@ -79,7 +79,7 @@
 						</div>
 
 						<div class="form-group">
-							<label for="tamano">¿Que forma tiene?</label>
+							<label for="tamano">¿Cuanto mide?</label>
 						 	<select class="form-control" name="tamano">
 						 		<option value="tamano_menos_1_cm">Menos de 1 cm.</option>
 						 		<option value="tamano_mas_1_cm">Mas de 1 cm.</option>\

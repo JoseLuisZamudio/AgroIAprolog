@@ -77,11 +77,10 @@ pulgones.
 hacia_delante(L):-
     nuevo_hecho_derivado(L,P),
     !,
-    write('Derivado: '),write(P),nl,
+    write('Plaga: '),write(P),nl,
     append([P],L,L1),
     hacia_delante(L1);
-    write("No hay mas registros"),nl,
-    write(L).
+    write("No hay mas registros").
 
 nuevo_hecho_derivado(L,Conclusion):-
     si Condicion entonces Conclusion,

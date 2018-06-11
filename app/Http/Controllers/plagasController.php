@@ -35,17 +35,17 @@ class plagasController extends Controller
           $tamano = $request->tamano;
           $color = $request->color;
 
-          // $plaga = "'hacia_delante([".$n_patas.",".$antenas.",".$caparazon.",".$alas.",".$exoesqueleto.",".$forma.",".$tamano.",".$color."]).'";
-          // $comando = `swipl -s Agente_desicion.pl -g $plaga -t halt.`;
+          $plaga = "'hacia_delante([".$n_patas.",".$antenas.",".$caparazon.",".$alas.",".$exoesqueleto.",".$forma.",".$tamano.",".$color."]).'";
+          $comando = "swipl -s Agente_desicion.pl -g $plaga -t halt.";
 
-          $process = new Process("swipl -s Agente_desicion.pl -g 'hacia_delante([patas_0,antenas_si,caparazon_si,alas_si,exoesqueleto_si,forma_redonda,tamano_menos_1_cm,color_verde]).' -t halt.");
-          // $process = new Process("dir");
+          $process = new Process($comando);
           $process->run();
           if (!$process->isSuccessful()) {
-    throw new ProcessFailedException($process);
-}
-          echo $process->getOutput();
-          // echo $plaga;
+            throw new ProcessFailedException($process);
+          }
+          $resultado = $process->getOutput();
+
+          return view('plagasResultado', compact('resultado'));
 
     }
 
